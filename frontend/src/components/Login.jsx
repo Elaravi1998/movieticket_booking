@@ -34,7 +34,8 @@ const Login = () => {
      
 
       // Handle success response
-      alert("Booking Successful!");
+      alert("Ticket Booking Successful!");
+      alert("Enjoy Watching Movie!!!");
       console.log("Response from server:", response.data);
 
       // Reset form
