@@ -17,6 +17,14 @@
     "mysql2": "^3.11.5",
     "nodemon": "^3.1.9",
     "sequelize": "^6.37.5"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Elaravi1998/movieticket_booking.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Elaravi1998/movieticket_booking/issues"
+  },
+  "homepage": "https://github.com/Elaravi1998/movieticket_booking#readme"
 }
-
