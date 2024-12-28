@@ -5,15 +5,14 @@ const cors = require('cors');
 const userRoutes = require('./routes/userRoutes');
 
 const app = express();
-const port = process.env.PORT || 5000;  // Change port to 7001 or any other unused port
+const port = process.env.PORT || 5000;  
 
-// MongoDB connection string
+
 const MONGO_URL= 'mongodb+srv://user2000:test123@elaorton.qv0zp.mongodb.net/?retryWrites=true&w=majority&appName=elaorton';
-//const MONGO_URL = 'mongodb+srv://subasree:Subasree24@mydatabase.mz8ix.mongodb.net/?retryWrites=true&w=majority&appName=mydatabase';
 
-// Middleware
+
 app.use(bodyParser.json());
-app.use(cors()); // This will allow all origins, you can configure it more specifically if needed
+app.use(cors()); 
 
 
 mongoose.connect(MONGO_URL)
@@ -27,10 +26,53 @@ mongoose.connect(MONGO_URL)
 // Set up routes
 app.use('/api', userRoutes());  // Fixed this line
 
-// Start the server
-app.listen(() => {
-  console.log('Server running on port ${port}');
+app.get('/',(req,res)=>{
+  res.send('Welcome to ticketbooking app')
+})
+
+app.listen(port, () => {
+  console.log(`Server running on http://localhost:${port}`);
 });
+
+
+
+// const express = require('express');
+// const bodyParser = require('body-parser');
+// const mongoose = require('mongoose');
+// const cors = require('cors');
+// const userRoutes = require('./routes/userRoutes');
+
+// const app = express();
+// const port = process.env.PORT || 5000;  // Change port to 7001 or any other unused port
+
+// // MongoDB connection string
+// const MONGO_URL= 'mongodb+srv://user2000:test123@elaorton.qv0zp.mongodb.net/?retryWrites=true&w=majority&appName=elaorton';
+// //const MONGO_URL = 'mongodb+srv://subasree:Subasree24@mydatabase.mz8ix.mongodb.net/?retryWrites=true&w=majority&appName=mydatabase';
+
+// // Middleware
+// app.use(bodyParser.json());
+// app.use(cors()); // This will allow all origins, you can configure it more specifically if needed
+
+
+// mongoose.connect(MONGO_URL)
+// .then(() => {
+//     console.log("DB connected");
+// })
+// .catch((err) => {
+//     console.error("Error connecting to MongoDB", err);
+// });
+
+// // Set up routes
+// app.use('/api', userRoutes());  // Fixed this line
+
+//   app.get('/',(req,res)=>{
+//     res.send('welcome to bookmyshow');
+//   })
+
+// // Start the server
+// app.listen(port,() => {
+//   console.log('Server running on port ${port}');
+// });
 
 
 // const express = require('express');
@@ -123,15 +165,15 @@ app.listen(() => {
 
 //   // Save booking data (for example, to a database)
 //   const booking = { movieName, time, seats, namess, ph, email, payment };
-//   bookings.push(booking);
+// //   bookings.push(booking);
 
-//   res.status(201).json({ message: "Booking successful!", booking });
-// });
+// //   res.status(201).json({ message: "Booking successful!", booking });
+// // });
  
 
-app.listen(port, () => {
-  console.log(`Server running on http://localhost:${port}`);
-});
+// app.listen(port, () => {
+//   console.log(`Server running on http://localhost:${port}`);
+// });
 
 
 
