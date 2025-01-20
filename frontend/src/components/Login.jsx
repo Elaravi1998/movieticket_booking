@@ -59,12 +59,14 @@ const Login = () => {
   };
 
   return (
-    <div className="container">
-      <h1 className="header">HELLO EVERYONE! WELCOME TO MY TICKET BOOKING WEBSITE</h1>
-      <div className="form-container">
-        <h2 className="form-title"><i>TICKET BOOKING FORM</i></h2>
+    <div className="container1">
+      <h3 className="header1">HELLO EVERYONE...!!! WELCOME TO VTS SHOW</h3>
+      <br></br>
+      <h5>VTS Show is an exciting and innovative platform dedicated to bringing the best of entertainment to your screens. From the latest blockbuster movies to live events, thrilling plays, and exciting sports matches, VTS Show offers a wide variety of entertainment options that cater to all types of viewers. Whether you're a movie enthusiast, a theater lover, or a sports fanatic, VTS Show ensures an unforgettable experience with top-quality content, cutting-edge technology, and seamless accessibility.</h5>
+      <div className="form-container1">
+        <h2 className="form-title1"><i>VTS SHOW BOOKING FORM</i></h2>
         <form onSubmit={handleSubmit}>
-          <div className="form-field">
+          <div className="form-field1">
             <label>Movie Interested:</label>
             <input
               type="text"
@@ -75,7 +77,7 @@ const Login = () => {
               required
             />
           </div>
-          <div className="form-field">
+          <div className="form-field1">
             <label>Timings:</label>
             <input
               type="text"
@@ -86,7 +88,7 @@ const Login = () => {
               required
             />
           </div>
-          <div className="form-field">
+          <div className="form-field1">
             <label>Seat Required:</label>
             <input
               type="text"
@@ -97,7 +99,7 @@ const Login = () => {
               required
             />
           </div>
-          <div className="form-field">
+          <div className="form-field1">
             <label>Your Name:</label>
             <input
               type="text"
@@ -108,7 +110,7 @@ const Login = () => {
               required
             />
           </div>
-          <div className="form-field">
+          <div className="form-field1">
             <label>Phone Number:</label>
             <input
               type="text"
@@ -119,7 +121,7 @@ const Login = () => {
               required
             />
           </div>
-          <div className="form-field">
+          <div className="form-field1">
             <label>Mail ID:</label>
             <input
               type="email"
@@ -130,7 +132,7 @@ const Login = () => {
               required
             />
           </div>
-          <div className="form-field">
+          <div className="form-field1">
             <label>Payment:</label>
             <input
               type="number"
@@ -141,11 +143,11 @@ const Login = () => {
               required
             />
           </div>
-          <button type="submit" className="submit-btn" disabled={isSubmitting}>
+          <button type="submit1" className="submit-btn1" disabled={isSubmitting}>
             {isSubmitting ? "Submitting..." : "Submit"}
           </button>
         </form>
-        <p className="thank-you">THANKS FOR BOOKING US!</p>
+        <p className="thank-you1">THANKS FOR BOOKING US!</p>
       </div>
     </div>
   );
